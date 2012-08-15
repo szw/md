@@ -19,7 +19,7 @@ function run_md {
 }
 
 function usage {
-    echo -e "MD - The Markdown presentation tool - (C) 2012 Szymon Wrozynski"
+    echo -e "MD - The Markdown presentation tool - Copyright (c) 2012 Szymon Wrozynski"
     echo -e "Licensed under the MIT License. More details here: https://github.com/szw/md"
     echo -e "Usage: $0 [file_name]"
 }
