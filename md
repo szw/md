@@ -19,7 +19,9 @@ function run_md {
 }
 
 function usage {
-    echo -e "\nusage: $0 [file_name]"
+    echo -e "MD - The Markdown presentation tool - (C) 2012 Szymon Wrozynski"
+    echo -e "Licensed under the MIT License. More details here: https://github.com/szw/md"
+    echo -e "Usage: $0 [file_name]"
 }
 
 if [ -z "$1" ]; then
@@ -27,6 +29,3 @@ if [ -z "$1" ]; then
 else
     run_md $1
 fi
-
-echo -e "\n"
-
