@@ -8,7 +8,7 @@ function run_md {
     echo '<html lang="en"' >> $TMP$1.html
     echo '<head>' >> $TMP$1.html
     echo '<meta charset="utf-8" />' >> $TMP$1.html
-    echo '<title>Markdown Preview</title>' >> $TMP$1.html
+    echo "<title>$1 - Markdown Preview Window</title>" >> $TMP$1.html
     echo '<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>' >> $TMP$1.html
     echo '</head>' >> $TMP$1.html
     echo '<body>' >> $TMP$1.html
