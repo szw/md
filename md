@@ -1,21 +1,21 @@
 #!/bin/bash
 
-export TMP=/tmp/md_view_
+export TMP=/tmp/md_view_tmp.html
 
 function run_md {
-    rm -f $TMP**
-    echo '<!DOCTYPE html>' > $TMP$1.html
-    echo '<html lang="en"' >> $TMP$1.html
-    echo '<head>' >> $TMP$1.html
-    echo '<meta charset="utf-8" />' >> $TMP$1.html
-    echo "<title>$1 - Markdown Preview Window</title>" >> $TMP$1.html
-    echo '<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>' >> $TMP$1.html
-    echo '</head>' >> $TMP$1.html
-    echo '<body>' >> $TMP$1.html
-    Markdown.pl --html4tags $1 >> $TMP$1.html
-    echo '</body>' >> $TMP$1.html
-    echo '</html>' >> $TMP$1.html
-    xdg-open $TMP$1.html
+    rm -f $TMP
+    echo '<!DOCTYPE html>' > $TMP
+    echo '<html lang="en"' >> $TMP
+    echo '<head>' >> $TMP
+    echo '<meta charset="utf-8" />' >> $TMP
+    echo "<title>$1 - Markdown Preview Window</title>" >> $TMP
+    echo '<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>' >> $TMP
+    echo '</head>' >> $TMP
+    echo '<body>' >> $TMP
+    Markdown.pl --html4tags $1 >> $TMP
+    echo '</body>' >> $TMP
+    echo '</html>' >> $TMP
+    xdg-open $TMP
 }
 
 function usage {
