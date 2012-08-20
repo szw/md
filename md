@@ -1,5 +1,6 @@
 #!/bin/bash
-
+export DIRNAME=`dirname "$1"`
+export BASENAME=`basename "$1"`
 export TMP=/tmp/md_view_tmp.html
 
 function run_md {
@@ -12,7 +13,8 @@ function run_md {
     echo '<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>' >> $TMP
     echo '</head>' >> $TMP
     echo '<body>' >> $TMP
-    Markdown.pl --html4tags $1 >> $TMP
+    cd "$DIRNAME"
+    Markdown.pl --html4tags "$BASENAME" >> $TMP
     echo '</body>' >> $TMP
     echo '</html>' >> $TMP
     xdg-open $TMP
