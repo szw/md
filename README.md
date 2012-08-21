@@ -39,6 +39,15 @@ In Vim you might use:
     :!md filename
 
 
+Vim snippet
+-----------
+
+You can easily integrate **md** with Vim. The following snippet set **md** as a Vim
+command, accessed via `:Md`:
+
+    au FileType markdown command! -buffer -nargs=0 Md :silent! :exe '! md "' . expand('%:p') . '"' | redraw!
+
+
 License & copyright
 -------
 
