@@ -16,7 +16,7 @@ and copy it somewhere on your *$PATH*.
     $ chmod +x Markdown.pl
     $ sudo cp Markdown.pl /usr/local/bin
 
-Finally, get **md** script, set is as an executable file and copy it like above;
+Finally, get **md** script, set is as an executable file and copy it like above:
 
     $ curl -O https://raw.github.com/szw/md/master/md
     $ chmod +x md
