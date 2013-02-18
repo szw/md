@@ -17,7 +17,11 @@ function run_md {
     Markdown.pl --html4tags "$BASENAME" >> $TMP
     echo '</body>' >> $TMP
     echo '</html>' >> $TMP
-    xdg-open $TMP
+    if [ $(uname -s) = "Darwin" ]; then
+        open $TMP
+    else
+        xdg-open $TMP
+    fi
 }
 
 function usage {
