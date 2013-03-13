@@ -105,9 +105,9 @@ function run_md {
 }
 
 function usage {
-    echo -e "MD - The Markdown presentation tool - Copyright (c) 2012-2013 Szymon Wrozynski"
+    echo -e "MD - The Markdown Viewer 0.2 - Copyright (c) 2012-2013 Szymon Wrozynski"
     echo -e "Licensed under the MIT License. More details here: https://github.com/szw/md"
-    echo -e "Usage: $0 [file_name, [target_name]]"
+    echo -e "Usage: $0 [file_name [target_name]]"
 }
 
 if [ -z "$1" ]; then

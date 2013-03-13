@@ -1,8 +1,7 @@
-md
+MD
 ==
 
-The Markdown presentation tool.
-
+The Markdown Viewer - version 0.2
 
 Instalation
 -----------
