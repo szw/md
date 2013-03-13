@@ -28,6 +28,12 @@ Usage
 
     md your_markdown_file.md
 
+or (if you want just the generated HTML):
+
+    md your_markdown_file.md your_target_file.html
+
+In the second case, the generated file will not be opened in the browser.
+
 Examples:
 
     $ md README.md
@@ -51,7 +57,7 @@ a Vim command, accessed via `:Md`:
 License & copyright
 -------------------
 
-Copyright &copy; 2012 Szymon Wrozynski
+Copyright &copy; 2012-2013 Szymon Wrozynski and Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
