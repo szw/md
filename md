@@ -89,6 +89,7 @@ function generate_html {
     echo '<body>' >> $TMP
     cd "$DIRNAME"
     Markdown.pl --html4tags "$BASENAME" >> $TMP
+    cd - >> /dev/null
     echo '</body>' >> $TMP
     echo '</html>' >> $TMP
 }
