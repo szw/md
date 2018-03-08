@@ -56,7 +56,7 @@ a Vim command, accessed via `:Md`:
 
 ## Sublime Text 3 Build System
 
-You can easily plugin the viewer into ST3 Build System. Create a file in your `Packages/User` directory (on macOS it could be `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`) named `Markdown\ Preview.sublime-build` the following content:
+You can easily plugin the viewer into [ST3 Build System](https://www.sublimetext.com/docs/3/build_systems.html). Create a file in your `Packages/User` directory (on macOS it could be `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`) named `Markdown\ Preview.sublime-build` the following content:
 
     {
         "selector": "text.html.markdown",
