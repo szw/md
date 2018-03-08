@@ -61,9 +61,7 @@ a Vim command, accessed via `:Md`:
 
 ## Sublime Text 3 Build System
 
-You can easily plugin the viewers into ST3 Build System:
-
-Create 2 files in your `Packages/User` directory (on macOS it will be `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`):
+You can easily plugin the viewers into ST3 Build System. Create 2 files in your `Packages/User` directory (on macOS it could be `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`).
 
 <table>
     <thead>
