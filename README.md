@@ -5,7 +5,7 @@ The [Markdown](https://daringfireball.net/projects/markdown/) Viewer - version 0
 
 ## Instalation
 
-Use curl or wget to download [Markdown.pl](http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip) script.  Then set it as an executable
+Use curl or wget to download [Markdown.pl](http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip) script. Then set it as an executable
 and copy it somewhere on your *$PATH*.
 
     $ curl -O http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip
@@ -20,19 +20,10 @@ Finally, get **md** script, set is as an executable file and copy it like above:
     $ chmod +x md
     $ sudo mv md /usr/local/bin
 
-For MDM (Markdown Math Viewer) get **mdm**:
-
-    $ curl -O https://raw.github.com/szw/md/master/mdm
-    $ chmod +x mdm
-    $ sudo mv mdm /usr/local/bin
-
-For more information about the Math rendering check [this MathJax quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
 
 ## Usage
 
     md your_markdown_file.md
-    mdm your_math_file.md
 
 or (if you want just the generated HTML):
 
@@ -50,6 +41,10 @@ In Vim you might use:
 
     :!md filename
 
+### Mathematics
+
+The viewer can also render math formulas using [MathJax](https://www.mathjax.org). For more information about the Math rendering check [this MathJax quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+
 
 ## Vim snippet
 
@@ -61,41 +56,20 @@ a Vim command, accessed via `:Md`:
 
 ## Sublime Text 3 Build System
 
-You can easily plugin the viewers into ST3 Build System. Create 2 files in your `Packages/User` directory (on macOS it could be `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`).
+You can easily plugin the viewer into ST3 Build System. Create a file in your `Packages/User` directory (on macOS it could be `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`) named `Markdown\ Preview.sublime-build` the following content:
 
-<table>
-    <thead>
-        <tr>
-            <th>File Name</th><th>Content</th><th>Comments</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>Markdown\ Preview.sublime-build</code></td>
-            <td>
-                <pre><code>{
-    "selector": "text.html.markdown",
-    "working_dir": "$project_path",
-    "path": "~/.local/bin",
-    "shell_cmd": "md $file"
-}</code></pre></td>
-            <td rowspan="2"><code>path</code> is necessary only if you put <code>md</code> (<code>mdd</code>) in a non-standard place (like here <code>~/.local/bin</code>)</td>
-        </tr>
-        <tr>
-            <td><code>Markdown\ Math\ Preview.sublime-build</code></td>
-            <td><pre><code>{
-    "selector": "text.html.markdown",
-    "working_dir": "$project_path",
-    "path": "~/.local/bin",
-    "shell_cmd": "mdm $file"
-}</code></pre></td>
-        </tr>
-    </tbody>
-</table>
+    {
+        "selector": "text.html.markdown",
+        "working_dir": "$project_path",
+        "path": "~/.local/bin",
+        "shell_cmd": "md $file"
+    }
+
+<small>_`path` is necessary only if you put `md` in a non-standard place (like here `~/.local/bin`)._</small>
 
 Afterwards, you can easily render Markdown by pressing (in case of macOS) <code>&#8984;</code> + `B`.
 
-To change the default viewer use <code>&#8679;</code> + <code>&#8984;</code> + `B`.
+If you have more Markdown related build systems already, you can change the default one using <code>&#8679;</code> + <code>&#8984;</code> + `B`.
 
 
 ## License & copyright
