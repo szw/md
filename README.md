@@ -97,6 +97,7 @@ Afterwards, you can easily render Markdown by pressing (in case of macOS) <code>
 
 To change the default viewer use <code>&#8679;</code> + <code>&#8984;</code> + `B`.
 
+
 ## License & copyright
 
 Copyright &copy; 2012-2018 Szymon Wrozynski and Contributors
