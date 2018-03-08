@@ -65,7 +65,7 @@ You can easily plugin the viewer into [ST3 Build System](https://www.sublimetext
         "shell_cmd": "md $file"
     }
 
-<small>_`path` is necessary only if you put `md` in a non-standard place (like here `~/.local/bin`)._</small>
+_`path` is necessary only if you put `md` in a non-standard place (like here `~/.local/bin`)._
 
 Afterwards, you can easily render Markdown by pressing (in case of macOS) <code>&#8984;</code> + `B`.
 
